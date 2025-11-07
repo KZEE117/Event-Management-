@@ -1,0 +1,256 @@
+﻿html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Background and text */
+body {
+  flex: 1;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('/images/event.jpeg') center/cover no-repeat fixed;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  padding-bottom: 70px; /* space so content doesn’t hide behind footer */
+}
+
+/* Ensure main fills space */
+main {
+  flex: 1;
+}
+
+/* ✅ Fixed Footer (always visible while scrolling) */
+footer {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #ccc;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Card and container adjustments for readability */
+.card {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+}
+
+.card-body {
+  color: #333;
+}
+
+h1, h4 {
+  color: #fff;
+}
+
+/* Buttons for modern, clean feel */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-outline-secondary {
+  border-color: #ccc;
+  color: #333;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #eee;
+}
+
+/* 🌈 Modern Glass Navbar */
+.glass-navbar {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.4s ease;
+    padding: 10px 0;
+    z-index: 2000;
+}
+
+    .glass-navbar .navbar-brand {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+    }
+
+    .glass-navbar .nav-link {
+        color: #f1f1f1 !important;
+        font-weight: 500;
+        margin: 0 10px;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+
+        .glass-navbar .nav-link:hover {
+            color: #00bfff !important;
+        }
+
+        .glass-navbar .nav-link::after {
+            content: "";
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #00bfff;
+            transition: width 0.3s;
+        }
+
+        .glass-navbar .nav-link:hover::after {
+            width: 100%;
+        }
+
+/* Adjust for scrolling pages */
+body {
+    padding-top: 70px; /* Prevents content hiding under navbar */
+}
+
+
+/* FAQ styles */
+.faq-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+    .faq-question:hover {
+        background: #0056b3;
+    }
+
+.faq-answer {
+    display: none;
+    padding: 15px 20px;
+    color: #333;
+    background: #fff;
+}
+
+    .faq-answer.active {
+        display: block;
+    }
+
+.faq-question.open::after {
+    content: "−";
+    float: right;
+    font-weight: bold;
+}
+
+.faq-question::after {
+    content: "+";
+    float: right;
+    font-weight: bold;
+}
+
+/* Report Page Styles */
+body {
+   
+    font-family: 'Poppins', sans-serif;
+}
+
+.report-page h1 {
+    letter-spacing: 1px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid #0d6efd;
+    padding-left: 10px;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #0d6efd, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.report-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+    .report-card:hover {
+        transform: translateY(-5px);
+        border-color: #00d4ff;
+        box-shadow: 0 8px 20px rgba(0, 212, 255, 0.1);
+    }
+
+.badge {
+    padding: 8px 12px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+    .badge.upcoming {
+        background: linear-gradient(90deg, #00d4ff, #007bff);
+    }
+
+    .badge.past {
+        background: linear-gradient(90deg, #6c757d, #adb5bd);
+    }
+
+.report-section {
+    margin-bottom: 3rem;
+}
